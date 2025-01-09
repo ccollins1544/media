@@ -13,8 +13,7 @@ const albumsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
     fetchFn: async (...args) => {
-      // @todo_cc Remove for production
-      await pause(1000);
+      // await pause(1000); // Comment for production
       return fetch(...args);
     },
   }),
